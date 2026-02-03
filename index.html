@@ -279,6 +279,26 @@
         box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
       }
 
+      /* GIF Styling */
+      .celebration-gif {
+        width: 280px;
+        height: 280px;
+        border-radius: 15px;
+        margin: 20px 0;
+        box-shadow: 0 10px 30px rgba(230, 30, 99, 0.3);
+        animation: slideIn 0.6s ease-out 0.3s both;
+        object-fit: cover;
+      }
+
+      .think-again-gif {
+        width: 220px;
+        height: 220px;
+        border-radius: 15px;
+        margin: 15px 0;
+        box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
+        object-fit: cover;
+      }
+
       /* Love Message Animation */
       .love-message {
         animation: fadeInUp 1s ease-out 0.5s both;
@@ -317,6 +337,23 @@
           transform: scale(1) rotateY(0deg);
         }
       }
+
+      /* Dance animation for dancing man */
+      @keyframes dance {
+        0%,
+        100% {
+          transform: rotate(0deg) scale(1);
+        }
+        25% {
+          transform: rotate(-15deg) scale(1.1);
+        }
+        50% {
+          transform: rotate(0deg) scale(1);
+        }
+        75% {
+          transform: rotate(15deg) scale(1.1);
+        }
+      }
     </style>
   </head>
   <body>
@@ -338,7 +375,8 @@
 
       <!-- Think Again Screen -->
       <div id="thinkAgainScreen" class="think-again">
-        <div class="emoji-container">🤔</div>
+        <div class="emoji-container">😭</div>
+        <p style="font-size: 3rem; margin: 20px 0">Please... 💔</p>
         <p>Come on... think about it again! 😊</p>
         <p style="font-size: 1.2rem; color: #666">Don't say no to love! 💕</p>
         <button class="retry-btn" onclick="backToQuestion()">
@@ -350,6 +388,11 @@
       <div id="celebrationScreen" class="celebration">
         <span class="emoji-large">🎉</span>
         <h2>YES! 🎊</h2>
+        <div
+          style="font-size: 5rem; margin: 20px 0; animation: dance 1s infinite"
+        >
+          🕺
+        </div>
         <p class="question-text">You've just made me the happiest! 💕💕💕</p>
         <div
           style="font-size: 3rem; margin: 30px 0; animation: spin 3s infinite"
